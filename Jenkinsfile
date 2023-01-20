@@ -10,7 +10,7 @@ pipeline{
         TERRADESTROY="N"
         FIRST_DEPLOY="Y"
         STATE_BUCKET="eks-sthree"
-        CLUSTER_NAME="<cluster_name>"
+        CLUSTER_NAME="sample-app"
     }
 
     stages{
