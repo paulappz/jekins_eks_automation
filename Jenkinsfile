@@ -20,11 +20,11 @@ pipeline{
                 environment name:'TERRADESTROY',value:'N'
                 environment name:'SKIP',value:'N'
             }
-            steps{
-                         script {
-                            sh(returnStdout: true, script: "aws s3 rb s3://'${env.STATE_BUCKET}' --force").trim()                    
-                        }
-                    }
+             steps{
+                sh'''
+                aws s3 mb s3://eks-sthree'''
+                
+            }
         }
 
         stage("Deploy Networking"){
