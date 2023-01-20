@@ -21,10 +21,10 @@ pipeline{
                 environment name:'SKIP',value:'N'
             }
             steps{
-                sh'''
-                aws s3 mb s3://eks-sthree'''
-                
-            }
+                         script {
+                            sh(returnStdout: true, script: "aws s3 rb s3://'${env.STATE_BUCKET}' --force").trim()                    
+                        }
+                    }
         }
 
         stage("Deploy Networking"){
