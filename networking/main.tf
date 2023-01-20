@@ -5,7 +5,7 @@ provider "aws" {
 locals {
   name            = "${var.cluster_name}-vpc"
   cluster_version = "1.21"
-  region          = "us-east-1"
+  region          = "eu-west-2"
 
   tags = {
     project    = local.name

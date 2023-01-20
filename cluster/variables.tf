@@ -1,9 +1,9 @@
 variable "cluster_name"{
-    default = "<name>"
+    default = "sample-app"
 }
 
 variable "state_bucket"{
-    default = "<name>"
+    default = "eks-sthree"
 }
 
 variable "state_key"{
@@ -11,5 +11,5 @@ variable "state_key"{
 }
 
 variable "state_region"{
-    default = "us-east-1"
+    default = "eu-west-2"
 }

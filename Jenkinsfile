@@ -3,13 +3,13 @@ pipeline{
     agent any
 
     environment{
-        AWS_ACCESS_KEY_ID=credentials('awsaccesskey')
-        AWS_SECRET_ACCESS_KEY=credentials('awssecretkey')
-        AWS_DEFAULT_REGION="us-east-1"
+        AWS_ACCESS_KEY_ID="AKIAYJ3WSSSC3HGJXGFZ"
+        AWS_SECRET_ACCESS_KEY="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"
+        AWS_DEFAULT_REGION="eu-west-2"
         SKIP="N"
         TERRADESTROY="N"
         FIRST_DEPLOY="Y"
-        STATE_BUCKET="<bucket>"
+        STATE_BUCKET="eks-sthree"
         CLUSTER_NAME="<cluster_name>"
     }
 
@@ -22,7 +22,7 @@ pipeline{
             }
             steps{
                 sh'''
-                aws s3 mb s3://<bucket_name>'''
+                aws s3 mb s3://eks-sthree'''
                 
             }
         }

@@ -1,3 +1,3 @@
 variable "cluster_name"{
-    default = "<name>"
+    default = "sample-app"
 }
