@@ -30,3 +30,8 @@ sudo chkconfig jenkins on
 sudo service docker start
 sudo service jenkins start
 
+echo "Install Terraform for Jenkins"
+
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform

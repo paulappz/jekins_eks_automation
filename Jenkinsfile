@@ -3,8 +3,8 @@ pipeline{
     agent any
 
     environment{
-        AWS_ACCESS_KEY_ID="AKIAYJ3WSSSC3HGJXGFZ"
-        AWS_SECRET_ACCESS_KEY="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"
+        AWS_ACCESS_KEY_ID=credentials('aws_key_id')
+        AWS_SECRET_ACCESS_KEY=credentials('aws_key_secret')
         AWS_DEFAULT_REGION="eu-west-2"
         SKIP="N"
         TERRADESTROY="N"
