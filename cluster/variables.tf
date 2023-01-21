@@ -7,7 +7,7 @@ variable "state_bucket"{
 }
 
 variable "state_key"{
-    default = "<key_val>"
+    default = "dev/sample-app/terraform.tfstate"
 }
 
 variable "state_region"{
